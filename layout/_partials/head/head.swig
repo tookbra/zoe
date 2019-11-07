@@ -25,3 +25,11 @@
 {%- endif %}
 
 <link rel="stylesheet" href="{{ url_for(theme.css) }}/zoe.css">
+
+<script id="hexo-configurations">
+  var CONFIG = {
+    root: '{{ config.root }}',
+    scheme: '{{ theme.scheme }}',
+    version: '{{ next_version }}',
+  }
+</script>

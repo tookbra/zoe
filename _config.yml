@@ -1,0 +1,10 @@
+menu:
+  主页: / || home
+  标签: /tags/ || tags
+  归档: /archives/ || archive
+  关于: /about/ || user
+
+# Assets
+css: css
+js: js
+images: images
