@@ -1,10 +1,41 @@
+home:
+  menu:
+    主页: / || home
+    博客: /archives/ || archive
 menu:
   主页: / || home
   标签: /tags/ || tags
   分类: /categories/ || th
-  归档: /archives/ || archive
   关于: /about/ || user
 
+# Post meta display settings
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: true
+    another_day: true
+  categories: true
+
+# Post wordcount display settings
+symbols_count_time:
+  separated_meta: true
+  item_text_post: true
+  item_text_total: false
+  awl: 4
+  wpm: 275
+
+# Table of Contents in the Sidebar
+toc:
+  enable: true
+  # Automatically add list number to toc.
+  number: true
+  # If true, all words will placed on next lines if header width longer then sidebar width.
+  wrap: false
+  # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
+  expand_all: false
+  # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front-matter.
+  max_depth: 6
 
 # Script Vendors. Set a CDN address for the vendor you want to customize.
 # Be aware that you would better use the same version as internal ones to avoid potential problems.

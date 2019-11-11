@@ -10,14 +10,14 @@
           <div class="col">
             <h1>{{ title }}</h1>
             <p>{{ subtitle }}</p>
-            {%- if theme.menu %}
+            {%- if theme.home.menu %}
               <nav class="index-nav">
                 <ul>
-                  {%- for name, path in theme.menu %}
+                  {%- for name, path in theme.home.menu %}
                     {%- set menuIcon = path.split('||')[1] | trim  %}
                     {%- set url = path.split('||')[0] | trim  %}
                     <li>
-                      <a href="{{ url }}" {%- if value.blank %} target="_blank" {%- endif %}>
+                      <a href="{{ url }}" {%- if value.blank %} target="_blank" {%- endif %} title="{{ name }}">
                       <i class="fa fa-fw fa-{{ menuIcon }}"></i>
                       </a>
                     </li>

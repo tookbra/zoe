@@ -36,6 +36,7 @@
 <script defer src="{{ jquery_uri }}"></script>
 
 <script id="hexo-configurations">
+  var Zoe = window.Zoe || {};
   var CONFIG = {
     root: '{{ config.root }}',
     scheme: '{{ theme.scheme }}',
