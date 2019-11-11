@@ -8,6 +8,12 @@ hexo.extend.helper.register('next_inject', function(point) {
     .join('');
 });
 
+hexo.extend.helper.register('next_vendors', function(url) {
+  if (url.startsWith('//')) return url;
+  const internal = hexo.theme.config.vendors._internal;
+  return this.url_for(`${internal}/${url}`);
+});
+
 hexo.extend.helper.register('canonical', function() {
   const { permalink } = hexo.config;
   const { canonical } = hexo.theme.config;

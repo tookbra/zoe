@@ -1,9 +1,19 @@
 menu:
   主页: / || home
   标签: /tags/ || tags
+  分类: /categories/ || th
   归档: /archives/ || archive
   关于: /about/ || user
 
+
+# Script Vendors. Set a CDN address for the vendor you want to customize.
+# Be aware that you would better use the same version as internal ones to avoid potential problems.
+# Remember to use the https protocol of CDN files when you enable https on your site.
+vendors:
+  # Internal path prefix.
+  _internal: lib
+
+  materialize:
 # Assets
 css: css
 js: js

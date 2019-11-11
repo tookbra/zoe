@@ -9,9 +9,12 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container-wrapper">
-    {% block content %}{% endblock %}
-    <footer class="footer">
-    </footer>
-  </div>
+    {% if not is_home() %}
+      {{ partial('_partials/header/index.swig', {}, {cache: theme.cache.enable}) }}
+    {% endif %}
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    {{ partial('_scripts/index.swig', {}, {cache: theme.cache.enable}) }}
 </body>

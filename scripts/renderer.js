@@ -21,6 +21,7 @@ function njkCompile(data) {
 }
 
 function njkRenderer(data, locals) {
+  console.log(data);
   return njkCompile(data).render(locals);
 }
 

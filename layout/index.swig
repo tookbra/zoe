@@ -3,27 +3,29 @@
 {% block title %}{{ title }}{%- if theme.index_with_subtitle and subtitle %} - {{ subtitle }}{%- endif %}{% endblock %}
 
 {% block content %}
-
-  <div class="bg-item bg-cover">
-    <div class="container">
-      <div style="margin: 0 auto; text-align: center" class="row">
-        <div class="col">
-          <h1>Ok Boom</h1>
-          <p>“勿忘初心，方得始终”</p>
-          <nav>
-            <ul>
-              <li>
-                <a href="fa fa-camera-retro">
-
-                </a>
-              </li>
-              <li>
-                <a href="fa fa-camera-retro">
-
-                </a>
-              </li>
-            </ul>
-          </nav>
+  <div class="home">
+    <div class="bg-item bg-cover">
+      <div class="container">
+        <div style="margin: 0 auto; text-align: center">
+          <div class="col">
+            <h1>{{ title }}</h1>
+            <p>{{ subtitle }}</p>
+            {%- if theme.menu %}
+              <nav class="index-nav">
+                <ul>
+                  {%- for name, path in theme.menu %}
+                    {%- set menuIcon = path.split('||')[1] | trim  %}
+                    {%- set url = path.split('||')[0] | trim  %}
+                    <li>
+                      <a href="{{ url }}" {%- if value.blank %} target="_blank" {%- endif %}>
+                      <i class="fa fa-fw fa-{{ menuIcon }}"></i>
+                      </a>
+                    </li>
+                  {%- endfor %}
+                </ul>
+              </nav>
+            {%- endif %}
+          </div>
         </div>
       </div>
     </div>

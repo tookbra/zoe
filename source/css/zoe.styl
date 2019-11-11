@@ -16,6 +16,10 @@ html, body {
   color: #34495e;
 }
 
+body {
+  background-color: #eaeaea;
+}
+
 h1 {
   margin: 0;
   padding: 0;
@@ -35,76 +39,160 @@ ol, ul {
   clearfix();
 }
 
-.container-wrapper {
+.home {
   height: 100%;
   width: 100%;
+  position: absolute;
+}
 
-  .content {
-    width: 100%;
-  }
+.bg-item {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-  .bg-item {
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+.bg-cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60vh;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  transform: translate3d(0px, 0px, 0px);
+}
 
-  .bg-cover {
+.pd-header {
+  margin-top: -64px;
+}
+
+.bg-cover .container {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+}
+
+.bg-cover .title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.85em;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.bg-cover .description {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.4em;
+  color: #eee;
+}
+
+.bg-item {
+  .container {
     position: relative;
-    display: flex;
-    align-items: center;
-    height: 60vh;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    background-position: center center;
-    background-size: cover;
-    transform: translate3d(0px, 0px, 0px);
-  }
+    color: #fff;
+    z-index: 2;
 
-  .bg-item {
-    .container {
-      position: relative;
-      color: #fff;
-      z-index: 2;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+    margin-top: -20rem;
 
-      margin: 0 auto;
-      max-width: 1280px;
-      width: 90%;
-      margin-top: -20rem;
+    h1 {
+      font-size: 4.35em;
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      line-height: 1em;
+    }
+    p {
+      font-size: 1.25em;
+      margin: 0.75em 0 0.25em 0;
+      opacity: 0.75;
+    }
 
-      h1 {
-        font-size: 4.35em;
-        font-weight: 900;
-        letter-spacing: -0.035em;
-        line-height: 1em;
+    .col ul li {
+      display: inline-block;
+
+      a {
+        transition: all 0.2s ease-in-out;
+        border-radius: 100%;
+        border: solid 1px #fff;
+        display: block;
+        font-size: 1.75em;
+        height: 2.5em;
+        line-height: 2.5em;
+        position: relative;
+        text-align: center;
+        top: 0;
+        width: 2.5em;
       }
-      p {
-        font-size: 1.25em;
-        margin: 0.75em 0 0.25em 0;
-        opacity: 0.75;
-      }
 
-      .col ul li {
-        display: inline-block;
-
-        a {
-          transition: all 0.2s ease-in-out;
-          border-radius: 100%;
-          border: solid 1px #fff;
-          display: block;
-          font-size: 1.75em;
-          height: 2.5em;
-          line-height: 2.5em;
-          position: relative;
-          text-align: center;
-          top: 0;
-          width: 2.5em;
-        }
+      a:hover {
+        font-size: 1.9em;
       }
     }
   }
 }
+
+header .nav-transparent, .index-nav {
+  background-color: transparent !important;
+  background-image: none;
+  box-shadow: none;
+}
+.index-nav {
+  margin-top: 1.5em;
+}
+.index-nav ul li {
+  float: none;
+  margin-left 1.5em;
+}
+
+.chip-container {
+  margin-top: -60px;
+
+  .tag-title {
+    margin-bottom: 10px;
+    color: #3C4858;
+    font-size: 1.75rem;
+    font-weight: 400;
+  }
+
+  .tag-chips {
+    margin: 1rem auto 0.5rem;
+    max-width: 850px;
+    text-align: center;
+  }
+
+  .chip {
+    margin: 10px 10px;
+    padding: 0 14px;
+    display: inline-block;
+    height: 38px;
+    min-width: 80px;
+    line-height: 39px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    word-wrap: break-word;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
+  }
+
+  .chip-default {
+    color: #34495e;
+  }
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+}
+
+@import "media.styl"
+
+

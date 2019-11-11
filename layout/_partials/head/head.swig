@@ -24,7 +24,16 @@
     <meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}">
 {%- endif %}
 
+{%- set font_awesome_uri = theme.vendors.fontawesome or next_vendors('font-awesome/css/font-awesome.min.css') %}
+<link rel="stylesheet" href="{{ font_awesome_uri }}">
+
+{%- set materialize_uri = theme.vendors.materialize or next_vendors('materialize/materialize.min.css') %}
+<link rel="stylesheet" href="{{ materialize_uri }}">
+
 <link rel="stylesheet" href="{{ url_for(theme.css) }}/zoe.css">
+
+{%- set jquery_uri = theme.vendors.jquery or next_vendors('jquery/jquery.min.js') %}
+<script defer src="{{ jquery_uri }}"></script>
 
 <script id="hexo-configurations">
   var CONFIG = {
