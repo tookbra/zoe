@@ -6,9 +6,8 @@
       </div>
       <div class="tag-chips">
         {% if site.categories and site.categories.length %}
-          {% for categories in site.categories %}
-            <a href="{{ url_for(categories.path) }}" class="tag-could" data-toggle="tooltip" data-placement="top" title="{{categories.name}}">{{ categories.name }}</a>
-            {{ zoe_tag(categories.name, 2, 3) }}
+          {% for categories in site.categories.toArray() %}
+            {{ zoe_tag(url_for(categories.path), categories.name, categories.length) }}
           {% endfor %}
         {% endif %}
       </div>

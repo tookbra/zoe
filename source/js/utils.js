@@ -9,7 +9,7 @@ HTMLElement.prototype.wrap = function(wrapper) {
 Zoe.utils = {
 
   registerSidebarTOC: function() {
-    const navItems = document.querySelectorAll('.post-toc li');
+    const navItems = document.querySelectorAll('.post-toc-content li');
     const sections = [...navItems].map(element => {
       var link = element.querySelector('a.nav-link');
       // TOC item animation navigate.
@@ -27,16 +27,16 @@ Zoe.utils = {
       return document.getElementById(link.getAttribute('href').replace('#', ''));
     });
 
-    var tocElement = document.querySelector('.post-toc-wrap');
+    var tocElement = document.querySelector('.post-toc-widget');
     function activateNavByIndex(target) {
       if (target.classList.contains('active-current')) return;
 
-      document.querySelectorAll('.post-toc .active').forEach(element => {
+      document.querySelectorAll('.post-toc-content .active').forEach(element => {
         element.classList.remove('active', 'active-current');
       });
       target.classList.add('active', 'active-current');
       var parent = target.parentNode;
-      while (!parent.matches('.post-toc')) {
+      while (!parent.matches('.post-toc-content')) {
         if (parent.matches('li')) parent.classList.add('active');
         parent = parent.parentNode;
       }
@@ -86,5 +86,5 @@ Zoe.utils = {
       });
     }
     createIntersectionObserver(document.documentElement.scrollHeight);
-  },
+  }
 };

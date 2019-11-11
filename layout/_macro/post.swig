@@ -34,10 +34,10 @@
             <span class="publish-author">
             {%- if post.categories and post.categories.length > 0 %}
               <i class="fa fa-bookmark fa-fw icon-category"></i>
-              {%- for category in page.categories %}
-              <a href="{{ category.path  }}" class="post-category">
-                    {{ category.name }}
-                </a>
+              {%- for category in post.categories.toArray() %}
+              <a href="{{ url_for(category.path) }}" class="post-category">
+                {{ category.name }}
+              </a>
             {%- endfor %}
             {%- endif %}
           </span>
@@ -46,9 +46,9 @@
 
         {%- if post.tags and post.tags.length > 0 %}
           <div class="card-action article-tags">
-            {%- for tag in page.tags %}
-              <a href="{{ tag.path }}">
-                <span class="chip bg-color"{{ tag.name }}</span>
+            {%- for tag in post.tags.toArray() %}
+              <a href="{{ url_for(tag.path) }}">
+                <span class="chip bg-color">{{ tag.name }}</span>
               </a>
             {%- endfor %}
           </div>
@@ -129,7 +129,7 @@
       </div>
       <hr class="clearfix">
       <div class="card-content article-card-content">
-        <div id="articleContent">
+        <div id="articleContent" class="post">
           {{ page.content  }}
         </div>
         <hr/>

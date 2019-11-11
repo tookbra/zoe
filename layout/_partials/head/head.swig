@@ -38,8 +38,29 @@
 <script id="hexo-configurations">
   var Zoe = window.Zoe || {};
   var CONFIG = {
-    root: '{{ config.root }}',
-    scheme: '{{ theme.scheme }}',
-    version: '{{ next_version }}',
-  }
+      root: '{{ config.root }}',
+      scheme: '{{ theme.scheme }}',
+      version: '{{ next_version }}',
+      exturl: {{ theme.exturl }},
+      sidebar: {{ theme.sidebar | json }},
+      copycode: {{ theme.codeblock.copy_button | json }},
+      back2top: {{ theme.back2top | json }},
+      bookmark: {{ theme.bookmark | json }},
+      algolia: {
+          appID: '{{ config.algolia.applicationID }}',
+          apiKey: '{{ config.algolia.apiKey }}',
+          indexName: '{{ config.algolia.indexName }}',
+          hits: {{ theme.algolia_search.hits | json }},
+          labels: {{ theme.algolia_search.labels | json }}
+      },
+      localsearch: {{ theme.local_search | json }},
+      path: '{{ config.search.path }}',
+      motion: {{ theme.motion | json }},
+      translation: {
+          copy_button: '{{ __("post.copy_button") }}',
+          copy_success: '{{ __("post.copy_success") }}',
+          copy_failure: '{{ __("post.copy_failure") }}'
+      },
+      sidebarPadding: 40
+  };
 </script>

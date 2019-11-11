@@ -1,3 +1,18 @@
+$variables = base;
+
+
+// Variables Layer
+// --------------------------------------------------
+for $variable in $variables
+  @import "_variables/" + $variable;
+
+// Scaffolding
+@import "_common/scaffolding/";
+
+// Components
+@import "_common/components/post/post.styl";
+
+
 clearfix() {
   &::before, &::after {
     content: ' ';
@@ -444,7 +459,7 @@ blockquote {
 
 #articleContent table, th, td {
   padding: 12px 13px;
-  border: 1px solid #dfe2e5;
+  //border: 1px solid #dfe2e5;
 }
 
 #articleContent table th {
@@ -452,17 +467,12 @@ blockquote {
   min-width: 80px;
 }
 
-.post-toc-widget {
-  padding-left: 20px;
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
 }
 
-.post-toc-widget .post-toc-title {
-  margin: 35px 0 15px 0;
-  padding-left: 17px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1.5rem;
-}
 @import "media.styl"
 
 

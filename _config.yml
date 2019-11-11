@@ -25,6 +25,19 @@ symbols_count_time:
   awl: 4
   wpm: 275
 
+codeblock:
+  # Code Highlight theme
+  # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
+  # See: https://github.com/chriskempson/tomorrow-theme
+  highlight_theme: normal
+  # Add copy button on codeblock
+  copy_button:
+    enable: false
+    # Show text copy result.
+    show_result: false
+    # Available values: default | flat | mac
+    style:
+
 # Table of Contents in the Sidebar
 toc:
   enable: true
@@ -37,12 +50,18 @@ toc:
   # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front-matter.
   max_depth: 6
 
+# Automatically add external URL with Base64 encrypt & decrypt.
+exturl: false
+
 # Script Vendors. Set a CDN address for the vendor you want to customize.
 # Be aware that you would better use the same version as internal ones to avoid potential problems.
 # Remember to use the https protocol of CDN files when you enable https on your site.
 vendors:
   # Internal path prefix.
   _internal: lib
+
+  # anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
+  anime:
 
   materialize:
 # Assets
