@@ -13,7 +13,7 @@
     </div>
   </nav>
 </header>
-<div class="bg-cover pd-header about-cover" style="background-image: url('https://img-tookbra.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191107213618.jpg');">
+<div class="bg-cover pd-header about-cover" style="background-image: url('https://images.alphacoders.com/736/736461.png');">
   <div class="container">
     <div class="row">
       <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -29,7 +29,7 @@
       </div>
     </div>
     <script>
-    document.getElementsByClassName("bg-cover")[0].style.backgroundImage = "url('https://img-tookbra.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191107213618.jpg')"
+    document.getElementsByClassName("bg-cover")[0].style.backgroundImage = "url('https://images.alphacoders.com/736/736461.png')"
     </script>
   </div>
 </div>

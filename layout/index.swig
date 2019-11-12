@@ -32,7 +32,7 @@
   </div>
 
   <script>
-    document.getElementsByClassName("bg-item")[0].style.backgroundImage = "url('https://img-tookbra.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191107213618.jpg')"
+    document.getElementsByClassName("bg-item")[0].style.backgroundImage = "url('https://images6.alphacoders.com/731/731739.png')"
   </script>
 
 {% endblock %}
