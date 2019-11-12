@@ -37,6 +37,8 @@ menu:
   sitemap: 站点地图
 
 post:
+  pre: 上一篇
+  next: 下一篇
   posted: 发表于
   edited: 更新于
   created: 创建时间

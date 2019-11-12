@@ -70,7 +70,7 @@ ol, ul {
 }
 
 .bg-cover {
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: center;
   height: 60vh;
@@ -85,7 +85,6 @@ ol, ul {
 .pd-header {
   margin-top: -64px;
   transform: none!important;
-  height: 350px;
   z-index: -1;
   top: 0;
   width: 100%;
@@ -173,7 +172,6 @@ header .nav-transparent, .index-nav {
 }
 
 .chip-container {
-  margin-top: -60px;
 
   .tag-title {
     margin-bottom: 10px;
@@ -260,7 +258,6 @@ header .nav-transparent, .index-nav {
 }
 
 .articles {
-  padding-top: 150px;
 
   .card {
     border-radius: 8px;
@@ -505,10 +502,6 @@ hr {
   color: #e91e63;
 }
 
-.post-container, .chip-container, .about-container {
-  padding-top 200px
-}
-
 .chip-container .chip-active {
   color: #FFF !important;
   background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%) !important;
@@ -536,6 +529,22 @@ hr {
     }
   }
 }
+
+.main {
+  margin-top: -100px;
+  height: 100%
+}
+
+.github-chart {
+  text-align: center;
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+@import "pagination.styl"
 @import "media.styl"
 
 

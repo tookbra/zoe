@@ -11,6 +11,14 @@ Zoe.utils = {
   registerScrollPercent: function() {
     var THRESHOLD = 64;
     var header = document.querySelector('.header-nav');
+    if(header) {
+      if (window.scrollY < THRESHOLD) {
+        header.classList.add('nav-transparent');
+      } else {
+        header.classList.remove('nav-transparent');
+      }
+    }
+
     window.addEventListener('scroll', () => {
       if(header) {
         if (window.scrollY < THRESHOLD) {

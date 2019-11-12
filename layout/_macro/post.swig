@@ -139,5 +139,6 @@
         <hr/>
       </div>
     </div>
+    {{ partial('_partials/prev-next.swig') }}
   </div>
 {%- endif %}

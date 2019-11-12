@@ -1,12 +1,33 @@
 {%- if page.prev or page.next %}
-  <nav class="pagination">
-    {{
-      paginator({
-        prev_text: '<i class="fa fa-angle-left" aria-label="'+__('accessibility.prev_page')+'"></i>',
-        next_text: '<i class="fa fa-angle-right" aria-label="'+__('accessibility.next_page')+'"></i>',
-        mid_size : 1,
-        escape   : false
-      })
-    }}
-  </nav>
+<div class="container paging">
+  <div class="row">
+    <div class="col s6 m4 l4">
+      {%- if page.prev %}
+        <a href="{{ url_for(page.prev_link) }}"
+           class="left btn-floating btn-large waves-effect waves-light bg-color">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      {%- else %}
+        <a class="left btn-floating btn-large disabled">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      {%- endif %}
+    </div>
+    <div class="page-info col m4 l4 hide-on-small-only">
+      <div class="center-align b-text-gray">{{ page.current }} / {{ page.total }}</div>
+    </div>
+    <div class="col s6 m4 l4">
+      {%- if page.next %}
+      <a href="{{ url_for(page.next_link) }}"
+         class="right btn-floating btn-large waves-effect waves-light bg-color">
+        <i class="fa fa-angle-right"></i>
+      </a>
+      {%- else %}
+      <a class="right btn-floating btn-large disabled">
+        <i class="fa fa-angle-right"></i>
+      </a>
+      {%- endif %}
+    </div>
+  </div>
+</div>
 {%- endif %}

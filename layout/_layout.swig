@@ -12,7 +12,7 @@
     {% if not is_home() %}
       {{ partial('_partials/header/index.swig', {}, {cache: theme.cache.enable}) }}
     {% endif %}
-    <main class="main">
+    <main class="main" {% if is_home() %} style="margin-top: inherit;" {% endif %}>
       {% block content %}{% endblock %}
     </main>
 

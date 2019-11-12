@@ -34,7 +34,15 @@
           </div>
         </div>
 
-        <div class="introduction center-align" data-aos="fade-up">222</div>
+        <div class="introduction center-align" data-aos="fade-up"></div>
+
+
+        <div class="github-chart">
+          <div class="title center-align aos-init aos-animate" data-aos="zoom-in-up">
+            <i class="fa fa-github"></i>&nbsp;&nbsp;GitHub
+          </div>
+          <img src="https://ghchart.rshah.org/tookbra" alt="GitHub Chart" data-action="zoom">
+        </div>
       </div>
     </div>
   </div>
