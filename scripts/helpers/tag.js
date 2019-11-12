@@ -18,14 +18,25 @@ const hashCode = function (str) {
 };
 let i = 0;
 
-hexo.extend.helper.register('zoe_tag', function(path, name, count) {
-  console.log(path);
+hexo.extend.helper.register('zoe_tag', function(path, name, count, isTag = true) {
   i++;
-  const color = i >= colorArr[i - 1];
-  return `<a href="${path}" title="${name}">
-                    <span class="chip center-align waves-effect waves-light" style="background-color: ${color}">${name}
+  const color = i >= colorCount ? colorArr[Math.abs(hashCode(name) % colorCount)]
+    : colorArr[i - 1];
+  var tagActivity = "chip-default";
+  if(isTag) {
+    tagActivity = "chip-active"
+  }
+  if(isTag) {
+    return `<a href="${path}" title="${name}">
+                    <span class="chip center-align waves-effect waves-light ${tagActivity}" style="background-color: ${color}">${name}
                         <span class="tag-length">${count}</span>
                     </span>
                 </a>`;
+  } else {
+    return `<a href="${path}" title="${name}">
+                    <span class="chip center-align waves-effect waves-light ${tagActivity}" style="background-color: ${color}">${name}
+                    </span>
+                </a>`;
+  }
 });
 

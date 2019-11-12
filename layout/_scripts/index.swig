@@ -1,5 +1,8 @@
 {% include 'vendors.swig' %}
 
 {{- next_js('utils.js') }}
-{{- next_js('schemes/pisces.js') }}
+
+{%- if is_post() %}
+  {{- next_js('schemes/pisces.js') }}
+{%- endif %}
 {{- next_js('zoe-boot.js') }}

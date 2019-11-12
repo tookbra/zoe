@@ -8,6 +8,20 @@ HTMLElement.prototype.wrap = function(wrapper) {
 
 Zoe.utils = {
 
+  registerScrollPercent: function() {
+    var THRESHOLD = 64;
+    var header = document.querySelector('.header-nav');
+    window.addEventListener('scroll', () => {
+      if(header) {
+        if (window.scrollY < THRESHOLD) {
+          header.classList.add('nav-transparent');
+        } else {
+          header.classList.remove('nav-transparent');
+        }
+      }
+    });
+  },
+
   registerSidebarTOC: function() {
     const navItems = document.querySelectorAll('.post-toc-content li');
     const sections = [...navItems].map(element => {

@@ -3,6 +3,9 @@ title:
   category: 分类
   tag: 标签
   schedule: 日程表
+  categoryRadar: 文章分类雷达图
+  categoryNumber: 文章分类数量
+  post: 文章
 accessibility:
   nav_toggle: 切换导航栏
   prev_page: 上一页

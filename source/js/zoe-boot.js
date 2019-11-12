@@ -2,6 +2,9 @@
 
 Zoe.boot = {};
 
+Zoe.boot.registerEvents = function() {
+  Zoe.utils.registerScrollPercent();
+};
 Zoe.boot.refresh = function() {
 
   /**
@@ -12,5 +15,6 @@ Zoe.boot.refresh = function() {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
+  Zoe.boot.registerEvents();
   Zoe.boot.refresh();
 });

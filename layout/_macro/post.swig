@@ -10,11 +10,15 @@
               {%- else %}
                 {%- set featureImg = '/images/featureimages/0.jpg' %}
                 {%- if theme.featureImages %}
-                  {%- set featureImg = Math.abs(hashCode(post.title) % len) %}
+                  {%- set featureImg = theme.featureImages | random %}
                 {%- endif %}
                 <img src="{{ featureImg }}" class="responsive-img" alt="{{ post.title }}">
               {%- endif %}
-              <span class="card-title">{{ post.title }}</span>
+              <div style="position: absolute; bottom: 0px; right: 0px; left: 0px; padding-top: 8px; background: rgba(0, 0, 0, 0.54);">
+                <div style="padding: 16px; position: relative;">
+                  <div style="font-size: 24px; color: rgba(255, 255, 255, 0.87); display: block; line-height: 36px;">{{ post.title }}</div>
+                </div>
+              </div>
             </div>
           </a>
         {%- endif %}
@@ -29,16 +33,16 @@
           </div>
           <div class="publish-info">
           <span class="publish-date">
-              <i class="fa fa-clock fa-fw icon-date"></i>{{ date(post.date, config.date_format) }}
+              <i class="fa fa-clock-o icon-date"></i>{{ date(post.date, config.date_format) }}
           </span>
             <span class="publish-author">
             {%- if post.categories and post.categories.length > 0 %}
               <i class="fa fa-bookmark fa-fw icon-category"></i>
               {%- for category in post.categories.toArray() %}
-              <a href="{{ url_for(category.path) }}" class="post-category">
-                {{ category.name }}
-              </a>
-            {%- endfor %}
+                <a href="{{ url_for(category.path) }}" class="post-category">
+                  {{ category.name }}
+                </a>
+              {%- endfor %}
             {%- endif %}
           </span>
           </div>

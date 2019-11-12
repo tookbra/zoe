@@ -2,12 +2,12 @@
 {% block title %}{{ __('title.about') }}: {{ page.about }} | {{ title }}{% endblock %}
 
 {% block content %}
-  <div id="about" class="container about-container">
+  <div id="about" class="about container about-container">
     <div class="card">
       <div class="card-content">
         <div class="row">
           <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
-  {#          <%- partial('_partial/post-statis') %>#}
+            {{ partial('_partials/post-statis.swig', {}, {cache: theme.cache.enable}) }}
           </div>
           <div class="col s12 m12 l4">
             <div class="profile center-align">
@@ -22,14 +22,14 @@
                 <div class="title">author</div>
                 <div class="career">111</div>
                 <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
-  {#                <%- partial('_partial/social-link') %>#}
+                  {{ partial('_partials/social-link.swig', {}, {cache: theme.cache.enable}) }}
                 </div>
               </div>
             </div>
           </div>
           <div class="col l4 hide-on-med-and-down" data-aos="zoom-in-left">
             <div class="social-link">
-  {#            <%- partial('_partial/social-link') %>#}
+              {{ partial('_partials/social-link.swig', {}, {cache: theme.cache.enable}) }}
             </div>
           </div>
         </div>

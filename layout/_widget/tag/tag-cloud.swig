@@ -7,7 +7,7 @@
       <div class="tag-chips">
         {% if site.tags and site.tags.length %}
           {% for tags in site.tags.toArray() %}
-            {{ zoe_tag(url_for(tags.path), tags.name, tags.length) }}
+            {{ zoe_tag(url_for(tags.path), tags.name, tags.length, is_tag() and tags.name == page.tag) }}
           {% endfor %}
         {% endif %}
       </div>

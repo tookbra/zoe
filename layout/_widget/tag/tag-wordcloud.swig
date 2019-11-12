@@ -13,8 +13,14 @@
   </div>
 </div>
 
-{#{%- set jqcloud_js_uri = theme.vendors.jqcloud or next_vendors('jqcloud/jqcloud-1.0.4.min.js') %}#}
-{#<script type="text/javascript" src="{{ jqcloud_js_uri }}"></script>#}
-{#<script type="text/javascript">#}
-
-{#</script>#}
+{%- set jqcloud_js_uri = theme.vendors.jqcloud or next_vendors('jqcloud/jqcloud-1.0.4.min.js') %}
+<script type="text/javascript" src="{{ jqcloud_js_uri }}"></script>
+<script type="text/javascript">
+var tagWordArr = [];
+{% for tag in site.tags.toArray() %}
+  tagWordArr.push({'text': '{{ tag.name }}', 'weight': {{ tag.length }}, 'link': '{{ tag.permalink }}'});
+{% endfor %}
+$('#tag-wordcloud').jQCloud(tagWordArr, {
+  autoResize: true
+});
+</script>

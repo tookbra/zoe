@@ -25,6 +25,15 @@ symbols_count_time:
   awl: 4
   wpm: 275
 
+# TagCloud settings for tags page.
+tagcloud:
+  # All values below are same as default, change them by yourself.
+  min: 12 # Minimun font size in px
+  max: 30 # Maxium font size in px
+  start: "#ccc" # Start color (hex, rgba, hsla or color keywords)
+  end: "#111" # End color (hex, rgba, hsla or color keywords)
+  amount: 200 # Amount of tags, change it if you have more than 200 tags
+
 codeblock:
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
@@ -50,6 +59,19 @@ toc:
   # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front-matter.
   max_depth: 6
 
+social:
+  GitHub: https://github.com/tookbra || github
+  E-Mail: mailto:tookbra@gmail.com || envelope
+  #Weibo: https://weibo.com/yourname || weibo
+  #Google: https://plus.google.com/yourname || google
+  #Twitter: https://twitter.com/yourname || twitter
+  #FB Page: https://www.facebook.com/yourname || facebook
+  #VK Group: https://vk.com/yourname || vk
+  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  #YouTube: https://youtube.com/yourname || youtube
+  #Instagram: https://instagram.com/yourname || instagram
+  #Skype: skype:yourname?call|chat || skype
+
 # Automatically add external URL with Base64 encrypt & decrypt.
 exturl: false
 
@@ -64,6 +86,34 @@ vendors:
   anime:
 
   materialize:
+
+# 无文章特色图片时需要显示的文章特色图片.
+featureImages:
+  - /images/featureimages/0.jpg
+  - /images/featureimages/1.jpg
+  - /images/featureimages/2.jpg
+  - /images/featureimages/3.jpg
+  - /images/featureimages/4.jpg
+  - /images/featureimages/5.jpg
+  - /images/featureimages/6.jpg
+  - /images/featureimages/7.jpg
+  - /images/featureimages/8.jpg
+  - /images/featureimages/9.jpg
+  - /images/featureimages/10.jpg
+  - /images/featureimages/11.jpg
+  - /images/featureimages/12.jpg
+  - /images/featureimages/13.jpg
+  - /images/featureimages/14.jpg
+  - /images/featureimages/15.jpg
+  - /images/featureimages/16.jpg
+  - /images/featureimages/17.jpg
+  - /images/featureimages/18.jpg
+  - /images/featureimages/19.jpg
+  - /images/featureimages/20.jpg
+  - /images/featureimages/21.jpg
+  - /images/featureimages/22.jpg
+  - /images/featureimages/23.jpg
+
 # Assets
 css: css
 js: js

@@ -33,7 +33,7 @@
 <link rel="stylesheet" href="{{ url_for(theme.css) }}/zoe.css">
 
 {%- set jquery_uri = theme.vendors.jquery or next_vendors('jquery/jquery.min.js') %}
-<script defer src="{{ jquery_uri }}"></script>
+<script src="{{ jquery_uri }}"></script>
 
 <script id="hexo-configurations">
   var Zoe = window.Zoe || {};

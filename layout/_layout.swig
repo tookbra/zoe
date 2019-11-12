@@ -12,7 +12,7 @@
     {% if not is_home() %}
       {{ partial('_partials/header/index.swig', {}, {cache: theme.cache.enable}) }}
     {% endif %}
-    <main>
+    <main class="main">
       {% block content %}{% endblock %}
     </main>
 

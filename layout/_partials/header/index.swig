@@ -1,5 +1,5 @@
 <header class="navbar-fixed">
-  <nav class="bg-color nav-transparent">
+  <nav class="bg-color nav-transparent header-nav">
     <div class="nav-wrapper container">
       <div class="brand-logo">
         <a href="/" class="waves-effect waves-light">
