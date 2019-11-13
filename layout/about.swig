@@ -12,15 +12,15 @@
           <div class="col s12 m12 l4">
             <div class="profile center-align">
               <div class="avatar">
-                <img src="https://blinkfox.github.io/medias/avatar.jpg" alt="11"
+                <img src="https://avatars2.githubusercontent.com/u/16607624?s=460&v=4" alt="11"
                      class="circle responsive-img avatar-img">
               </div>
               <div class="author">
                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
   {#                <%- partial('_partial/post-statis') %>#}
                 </div>
-                <div class="title">author</div>
-                <div class="career">111</div>
+                <div class="title">{{ author }}</div>
+                <div class="career"></div>
                 <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
                   {{ partial('_partials/social-link.swig', {}, {cache: theme.cache.enable}) }}
                 </div>

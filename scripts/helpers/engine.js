@@ -2,6 +2,8 @@
 
 'use strict';
 
+const crypto = require('crypto');
+
 hexo.extend.helper.register('next_inject', function(point) {
   return hexo.theme.config.injects[point]
     .map(item => this.partial(item.layout, item.locals, item.options))
@@ -28,4 +30,12 @@ hexo.extend.helper.register('canonical', function() {
     url = url.replace(/\.html$/, '');
   }
   return `<link rel="canonical" href="${url}">`;
+});
+
+
+hexo.extend.helper.register('gitalk_md5', function(path) {
+  let str = this.url_for(path);
+  str = encodeURI(str);
+  str.replace('index.html', '');
+  return crypto.createHash('md5').update(str).digest('hex');
 });

@@ -14,7 +14,10 @@
     {% endif %}
     <main class="main" {% if is_home() %} style="margin-top: inherit;" {% endif %}>
       {% block content %}{% endblock %}
-    </main>
 
+      {% include '_partials/comments.swig' %}
+    </main>
     {{ partial('_scripts/index.swig', {}, {cache: theme.cache.enable}) }}
+
+    {{- next_inject('bodyEnd') }}
 </body>

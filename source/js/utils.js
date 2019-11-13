@@ -108,5 +108,21 @@ Zoe.utils = {
       });
     }
     createIntersectionObserver(document.documentElement.scrollHeight);
+  },
+  getScript: function(url, callback, condition) {
+    if (condition) {
+      callback();
+    } else {
+      var script = document.createElement('script');
+      script.onload = script.onreadystatechange = function(_, isAbort) {
+        if (isAbort || !script.readyState || /loaded|complete/.test(script.readyState)) {
+          script.onload = script.onreadystatechange = null;
+          script = undefined;
+          if (!isAbort && callback) setTimeout(callback, 0);
+        }
+      };
+      script.src = url;
+      document.head.appendChild(script);
+    }
   }
 };
