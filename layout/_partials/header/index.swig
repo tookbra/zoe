@@ -13,7 +13,7 @@
     </div>
   </nav>
 </header>
-<div class="bg-cover pd-header about-cover" style="background-image: url('https://images.alphacoders.com/736/736461.png');">
+<div class="bg-cover pd-header about-cover" style="background-image: url('https://w.wallhaven.cc/full/49/wallhaven-499pe1.jpg');">
   <div class="container">
     <div class="row">
       <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -29,7 +29,7 @@
       </div>
     </div>
     <script>
-    document.getElementsByClassName("bg-cover")[0].style.backgroundImage = "url('https://images.alphacoders.com/736/736461.png')"
+    document.getElementsByClassName("bg-cover")[0].style.backgroundImage = "url('https://w.wallhaven.cc/full/49/wallhaven-499pe1.jpg')"
     </script>
   </div>
 </div>

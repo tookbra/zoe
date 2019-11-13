@@ -16,10 +16,13 @@
 <script type="text/javascript">
 let radarChart = echarts.init(document.getElementById('category-radar'));
 var radarValueArr = [];
+var indicatorArr = [];
+
+{% for group in site.categories.toArray() %}
+radarValueArr.push({{ group.length }})
+{% endfor %}
 
 var max = Math.max.apply(null, radarValueArr) + Math.min.apply(null, radarValueArr);
-
-var indicatorArr = [];
 
 {% for category in site.categories.toArray() %}
 indicatorArr.push({'name': '{{ category.name }}', 'max': 10});
@@ -53,7 +56,7 @@ let option = {
     itemStyle: {normal: {areaStyle: {type: 'default'}}},
     data : [
       {
-        value : indicatorArr,
+        value : radarValueArr,
         name : '{{ __("title.categoryNumber") }}',
       }
     ]

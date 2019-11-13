@@ -26,17 +26,10 @@ hexo.extend.helper.register('zoe_tag', function(path, name, count, isTag = true)
   if(isTag) {
     tagActivity = "chip-active"
   }
-  if(isTag) {
-    return `<a href="${path}" title="${name}">
-                    <span class="chip center-align waves-effect waves-light ${tagActivity}" style="background-color: ${color}">${name}
-                        <span class="tag-length">${count}</span>
-                    </span>
-                </a>`;
-  } else {
-    return `<a href="${path}" title="${name}">
-                    <span class="chip center-align waves-effect waves-light ${tagActivity}" style="background-color: ${color}">${name}
-                    </span>
-                </a>`;
-  }
+  return `<a href="${path}" title="${name}">
+                  <span class="chip center-align waves-effect waves-light ${tagActivity}" style="background-color: ${color}">${name}
+                      <span class="tag-length">${count}</span>
+                  </span>
+              </a>`;
 });
 

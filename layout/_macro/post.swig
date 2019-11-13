@@ -136,7 +136,6 @@
         <div id="articleContent" class="post">
           {{ page.content  }}
         </div>
-        <hr/>
       </div>
     </div>
     {{ partial('_partials/prev-next.swig') }}

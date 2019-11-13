@@ -7,7 +7,7 @@
 
   <article id="articles" class="container articles" style="padding-top: inherit;">
     <div class="row tags-posts">
-      {%- for post in page.posts.sort('date').reverse() %}
+      {%- for post in page.posts.toArray() %}
         <div class="article tag-post col s12 m6 l4" data-aos="fade-up">
           <div class="card">
             <a href="{{ url_for(post.path) }}">
@@ -41,6 +41,7 @@
                 </span>
               </div>
             </div>
+          </div>
         </div>
       {%- endfor %}
     </div>

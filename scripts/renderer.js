@@ -5,6 +5,12 @@
 const nunjucks = require('nunjucks');
 const path = require('path');
 
+var env = new nunjucks.Environment();
+
+env.addFilter('shorten', function(str, count) {
+  return str.slice(0, count || 5);
+});
+
 function njkCompile(data) {
   const templateDir = path.dirname(data.path);
   const env = nunjucks.configure(templateDir, {

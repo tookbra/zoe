@@ -57,7 +57,7 @@
     {%- endif %}
 
     {%- if page.next %}
-    <div class="article col s12 m6" data-aos="fade-up">
+    <div class="article col s12 m6" data-aos="fade-up" style="position: relative;">
       <div class="article-badge right-badge text-color">
       {{ __('post.next') }}&nbsp;<i class="fa fa-chevron-right"></i>
       </div>
