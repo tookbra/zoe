@@ -1,4 +1,5 @@
 {% extends '_layout.swig' %}
+{% block title %}{{ __('title.archive') }} | {{ title }}{% endblock %}
 
 {% block content %}
   <article id="articles" class="container articles">

@@ -9,6 +9,9 @@ menu:
   分类: /categories/ || th
   关于: /about/ || user
 
+# Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
+index_with_subtitle: false
+
 # Post meta display settings
 post_meta:
   item_text: true

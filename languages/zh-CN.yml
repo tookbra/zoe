@@ -6,6 +6,7 @@ title:
   categoryRadar: 文章分类雷达图
   categoryNumber: 文章分类数量
   post: 文章
+  about: 关于
 accessibility:
   nav_toggle: 切换导航栏
   prev_page: 上一页
@@ -39,6 +40,7 @@ menu:
 post:
   pre: 上一篇
   next: 下一篇
+  current: 本篇
   posted: 发表于
   edited: 更新于
   created: 创建时间
