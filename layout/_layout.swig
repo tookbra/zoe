@@ -17,7 +17,15 @@
 
       {% include '_partials/comments.swig' %}
     </main>
+
+    {% if not is_home() %}
+      {% block footer %}
+        {% include '_partials/footer.swig' %}
+      {% endblock %}
+    {% endif %}
+
     {{ partial('_scripts/index.swig', {}, {cache: theme.cache.enable}) }}
+
 
     {{- next_inject('bodyEnd') }}
 </body>
