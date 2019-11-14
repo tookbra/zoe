@@ -25,7 +25,7 @@
     {% endif %}
 
     {{ partial('_scripts/index.swig', {}, {cache: theme.cache.enable}) }}
-
+    {% include '_third-party/math/index.swig' %}
 
     {{- next_inject('bodyEnd') }}
 </body>
