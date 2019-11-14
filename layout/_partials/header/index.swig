@@ -13,23 +13,29 @@
     </div>
   </nav>
 </header>
-<div class="bg-cover pd-header about-cover" style="background-image: url('https://w.wallhaven.cc/full/49/wallhaven-499pe1.jpg');">
+<div class="bg-cover pd-header about-cover">
   <div class="container">
     <div class="row">
-      <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-          <div class="title center-align">
+      <div class="brand">
+        <div class="title center-align">
+          {%- if is_post() %}
+            {{ page.title }}
+          {%- else %}
             {{ title }}
-          </div>
+          {%- endif %}
+        </div>
 
-          <div class="description center-align">
-            {{ subtitle }}
-          </div>
+        <div class="description center-align">
+          {{ subtitle }}
         </div>
       </div>
     </div>
     <script>
-    document.getElementsByClassName("bg-cover")[0].style.backgroundImage = "url('https://w.wallhaven.cc/full/49/wallhaven-499pe1.jpg')"
+      {%- if is_post() and page.img %}
+        document.getElementsByClassName("bg-cover")[0].style.backgroundImage = "url('{{ page.img }}')"
+      {%- else %}
+        document.getElementsByClassName("bg-cover")[0].style.backgroundImage = "url('https://w.wallhaven.cc/full/49/wallhaven-499pe1.jpg')"
+      {%- endif %}
     </script>
   </div>
 </div>
