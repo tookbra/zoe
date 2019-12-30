@@ -203,7 +203,7 @@ vendors:
   # mathjax: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML
   # mhchem: //cdn.jsdelivr.net/npm/mathjax-mhchem@3
   # mhchem: //cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.0
-  mathjax:
+  mathjax: //cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
   mhchem:
 
 # 无文章特色图片时需要显示的文章特色图片.
